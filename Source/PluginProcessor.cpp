@@ -20,6 +20,7 @@ Proj1AudioProcessor::Proj1AudioProcessor()
 
 Proj1AudioProcessor::~Proj1AudioProcessor()
 {
+
 }
 
 //==============================================================================
@@ -148,9 +149,9 @@ void Proj1AudioProcessor::processBlock (AudioBuffer<float>& buffer, MidiBuffer& 
         if (*channelData > maxFreq) {
             maxFreq = *channelData;
         }
-        std::cout << "average: " << averageWave << std::endl;
-        std::cout << "min: " << minFreq << std::endl;
-        std::cout << "max: " << maxFreq << std::endl;
+//        std::cout << "average: " << averageWave << std::endl;
+//        std::cout << "min: " << minFreq << std::endl;
+//        std::cout << "max: " << maxFreq << std::endl;
     }
 }
 
