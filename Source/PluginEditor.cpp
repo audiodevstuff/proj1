@@ -15,6 +15,9 @@
 Proj1AudioProcessorEditor::Proj1AudioProcessorEditor (Proj1AudioProcessor& p)
     : AudioProcessorEditor (&p), processor (p)
 {
+    someButton.setButtonText("yep!");
+    someButton.setColour(TextButton::buttonColourId, Colours::grey);
+    addAndMakeVisible(someButton);
     setSize (400, 400);
 }
 
@@ -25,8 +28,9 @@ void Proj1AudioProcessorEditor::paint (Graphics& g) {
 
     g.setColour (Colours::white);
 
-    g.drawRect(10, 50, 150, 30, 1);
-    g.drawText("Button 1", 10, 50, 150, 30, Justification::centred, 1);
+    g.drawText("text here", 10, 200, 150, 30, Justification::centred, 1);
 }
 
-void Proj1AudioProcessorEditor::resized() {}
+void Proj1AudioProcessorEditor::resized() {
+    someButton.setBounds(10, 10, 100, 20);
+}
